@@ -13,6 +13,7 @@ class UserController extends ResourceController
 
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
+        helper(['UUIDv4']);
         parent::initController($request, $response, $logger);
         $this->usersModel = new \App\Models\UserModel();
         $this->validation = \Config\Services::validation();
@@ -52,8 +53,8 @@ class UserController extends ResourceController
             return $this->failValidationErrors($this->validation->getErrors(), 403);
         }
 
-        $data['HASH'] = uuid(); // Generate UUID
-
+        $data['HASH'] = UUIDv4(); 
+        
         $result = $this->usersModel->createUser($data);
 
         if (!$result->result) {
