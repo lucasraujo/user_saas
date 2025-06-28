@@ -1,0 +1,36 @@
+app/writable/*
+!app/writable/index.html
+!app/writable/.htaccess
+
+# Excluir arquivos de cache e logs
+app/writable/cache/*
+app/writable/logs/*
+!app/writable/cache/index.html
+!app/writable/logs/index.html
+
+# Composer
+/vendor/
+composer.lock
+
+# Environments
+app/.env
+app/.env.*
+
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+# Docker (volumes, builds)
+docker/php/vendor/
+docker-compose.override.yml
+*.pid
+
+# Arquivos de build temporários
+*.bak
+*.tmp
+*.swp
+*.swo
