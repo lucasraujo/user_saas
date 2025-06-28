@@ -14,13 +14,13 @@ class UserController extends ResourceController
 
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
-        helper(['UUIDv4', "passwordValidationRule"]);
+        helper(['UUIDv4', "validations"]);
         parent::initController($request, $response, $logger);
         $this->usersModel = new \App\Models\UserModel();
         $this->validation = \Config\Services::validation();
     }
 
-    public function getAllClients()
+    public function getAllUsers()
     {
         $result = $this->usersModel->getUsers([], ["HASH", "NAME", "EMAIL", "PHONE"]);
         if (!$result->result) {
@@ -29,7 +29,7 @@ class UserController extends ResourceController
         return $this->respond($result);
     }
 
-    public function getClient($uuid = '')
+    public function getUser($uuid = '')
     {
         $result = $this->usersModel->getUsers(["HASH" => $uuid], ["HASH", "NAME", "EMAIL", "PHONE"]);
         if (!$result->result) {
@@ -41,7 +41,7 @@ class UserController extends ResourceController
         return $this->respond($result->response[0]);
     }
 
-    public function createClient()
+    public function createUser()
     {
         $data = $this->request->getJSON(true);
 
@@ -71,7 +71,7 @@ class UserController extends ResourceController
         ], 201);
     }
 
-    public function updateClient($uuid = '')
+    public function updateUser($uuid = '')
     {
         $data = $this->request->getJSON(true);
 
@@ -118,7 +118,7 @@ class UserController extends ResourceController
         return $this->respond(['message' => 'User updated successfully']);
     }
 
-    public function deleteClient($uuid = '')
+    public function deleteUser($uuid = '')
     {
         $existing = $this->usersModel->getUsers(['HASH' => $uuid], ["ID"]);
         if (!$existing->result || count($existing->response) === 0) {

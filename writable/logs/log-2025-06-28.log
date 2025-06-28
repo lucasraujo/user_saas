@@ -360,3 +360,142 @@ in APPPATH/Controllers/UserController.php on line 37.
  7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:00:09 --> Error: Call to undefined function App\Controllers\passwordValidationRule()
+[Method: POST, Route: user/]
+in APPPATH/Controllers/UserController.php on line 51.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->createUser()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:12:41 --> CodeIgniter\Filters\Exceptions\FilterException: "authFilter" filter must have a matching alias defined.
+[Method: GET, Route: user/all]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('authFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('authFilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:13:07 --> CodeIgniter\Filters\Exceptions\FilterException: "authFilter" filter must have a matching alias defined.
+[Method: GET, Route: user/all]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('authFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('authFilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:14:52 --> CodeIgniter\Filters\Exceptions\FilterException: "JwtAuthFilter" filter must have a matching alias defined.
+[Method: GET, Route: user/all]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('JwtAuthFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('JwtAuthFilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:18:12 --> CodeIgniter\Filters\Exceptions\FilterException: "JwtAuthFilter" filter must have a matching alias defined.
+[Method: GET, Route: user/all]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('JwtAuthFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('JwtAuthFilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:20:01 --> CodeIgniter\Filters\Exceptions\FilterException: "JwtAuthFilter" filter must have a matching alias defined.
+[Method: GET, Route: user/all]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('JwtAuthFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('JwtAuthFilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:20:26 --> CodeIgniter\Filters\Exceptions\FilterException: "JwtAuthFilter" filter must have a matching alias defined.
+[Method: GET, Route: user/all]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('JwtAuthFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('JwtAuthFilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:21:08 --> CodeIgniter\Filters\Exceptions\FilterException: "JwtAuthFilter" filter must have a matching alias defined.
+[Method: GET, Route: user/all]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('JwtAuthFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('JwtAuthFilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:27:42 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 941.
+ 1 SYSTEMPATH/Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(920): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/AuthController.php(23): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:28:12 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 941.
+ 1 SYSTEMPATH/Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(920): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/AuthController.php(23): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:35:05 --> Error: Call to undefined method stdClass::first()
+[Method: POST, Route: auth/login]
+in APPPATH/Controllers/AuthController.php on line 23.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:35:27 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: auth/login]
+in APPPATH/Controllers/AuthController.php on line 25.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:41:34 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: auth/login]
+in APPPATH/Controllers/AuthController.php on line 24.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 21:42:16 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: auth/login]
+in APPPATH/Controllers/AuthController.php on line 25.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
