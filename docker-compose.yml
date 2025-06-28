@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: ./docker/php
+    container_name: ci4_app
+    volumes:
+      - .:/var/www/html
+    expose:
+      - 9000
+    networks:
+      - ci4net
+
+  nginx:
+    image: nginx:latest
+    container_name: ci4_nginx
+    ports:
+      - "3002:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - ci4net
+
+  db:
+    image: mysql:8.3
+    container_name: ci4_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ci4db
+      MYSQL_USER: ci4user
+      MYSQL_PASSWORD: ci4pass
+    ports:
+      - "3306:3306"
+    networks:
+      - ci4net
+
+networks:
+  ci4net:
+    driver: bridge
