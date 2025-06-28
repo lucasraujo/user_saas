@@ -14,7 +14,7 @@ class UserController extends ResourceController
 
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
-        helper(['UUIDv4', "validations"]);
+        helper(['UUIDv4', "validations", "auth"]);
         parent::initController($request, $response, $logger);
         $this->usersModel = new \App\Models\UserModel();
         $this->validation = \Config\Services::validation();
@@ -44,6 +44,7 @@ class UserController extends ResourceController
     public function createUser()
     {
         $data = $this->request->getJSON(true);
+        $loggedUser = authUser();
 
         $this->validation->setRules([
             'NAME'  => 'required|min_length[2]',
@@ -59,6 +60,7 @@ class UserController extends ResourceController
 
         $data['PASSWORD'] = password_hash($data['PASSWORD'], PASSWORD_DEFAULT);
 
+        $data["USER_INSERT"] = $loggedUser->id;
         $result = $this->usersModel->createUser($data);
 
         if (!$result->result) {
@@ -73,6 +75,8 @@ class UserController extends ResourceController
 
     public function updateUser($uuid = '')
     {
+        
+        $loggedUser = authUser();                                                 
         $data = $this->request->getJSON(true);
 
         $existing = $this->usersModel->getUsers(['HASH' => $uuid], ["ID", "EMAIL"]);
@@ -88,7 +92,7 @@ class UserController extends ResourceController
         
         if (isset($data['EMAIL'])) {
             $rules['EMAIL'] = 'valid_email';
-            if ($data['EMAIL'] !== $user['EMAIL']) {
+            if ($data['EMAIL'] !== $user->EMAIL) {
                 $rules['EMAIL'] .= '|is_unique[users.EMAIL]';
             }
         }
@@ -109,7 +113,9 @@ class UserController extends ResourceController
             unset($data['PASSWORD']);
         }
 
-        $result = $this->usersModel->updateUser($uuid, $data);
+        $data["USER_UPDATE"] = $loggedUser->id;
+        $data["DTHR_UPDATE"] =  date('Y-m-d H:i:s');
+        $result = $this->usersModel->updateUser(["HASH"=>$uuid], $data);
 
         if (!$result->result) {
             return $this->failServerError($result->message, 500);
