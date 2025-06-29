@@ -36,7 +36,8 @@ class AuthController extends ResourceController
 
         return $this->respond([
             'message' => 'Login successful',
-            'token' => $token
+            'token' => $token,
+            'result' => true
         ]);
     }
 }

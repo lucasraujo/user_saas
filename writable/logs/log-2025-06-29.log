@@ -36,3 +36,128 @@ in APPPATH/Helpers/auth_helper.php on line 6.
  6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  8 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 15:50:11 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, none returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 18:18:20 --> ErrorException: file_get_contents(/var/www/html/app/Views/login/modals/js/main.js): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH/Controllers/Login.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(/var/www/html/app/Views/login/modals/js/main.js): Failed to open stream: No such file or directory', '/var/www/html/app/Controllers/Login.php', 10)
+ 2 APPPATH/Controllers/Login.php(10): file_get_contents('/var/www/html/app/Views/login/modals/js/main.js')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Login->index()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 18:52:00 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: POST, Route: %3C]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 18:52:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: POST, Route: %3C]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 18:52:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: POST, Route: %3C]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 18:54:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: POST, Route: %3C]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 18:58:45 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: POST, Route: %3C]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 19:00:17 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: POST, Route: %3C]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 19:03:51 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: POST, Route: %3C]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 19:05:30 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: api/login]
+in SYSTEMPATH/HTTP/IncomingRequest.php on line 537.
+ 1 SYSTEMPATH/HTTP/IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH/Controllers/AuthController.php(13): CodeIgniter\HTTP\IncomingRequest->getJSON(true)
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 20:08:11 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, bool given, called in /var/www/html/system/Cookie/Cookie.php on line 232
+[Method: POST, Route: api/login]
+in SYSTEMPATH/Cookie/Cookie.php on line 741.
+ 1 SYSTEMPATH/Cookie/Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '/')
+ 2 SYSTEMPATH/HTTP/ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImhhc2giOiJkMDMwOWNmMy01NTA0LTExZjAtYmM0Ny0wMjQyYzBhOGMwMDMiLCJ1c2VyX3R5cGUiOiIxIiwiaWF0IjoxNzUxMjI3NjkxLCJleHAiOjE3NTEyMzEyOTF9.5kiRYbOBy4I7vwuzNzMVqyCnn-zsGh6ewx6t85ztdFM', [...])
+ 3 APPPATH/Controllers/AuthController.php(37): CodeIgniter\HTTP\Response->setCookie('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImhhc2giOiJkMDMwOWNmMy01NTA0LTExZjAtYmM0Ny0wMjQyYzBhOGMwMDMiLCJ1c2VyX3R5cGUiOiIxIiwiaWF0IjoxNzUxMjI3NjkxLCJleHAiOjE3NTEyMzEyOTF9.5kiRYbOBy4I7vwuzNzMVqyCnn-zsGh6ewx6t85ztdFM', 1751231291, '/', '', false, true)
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 20:08:29 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, bool given, called in /var/www/html/system/Cookie/Cookie.php on line 232
+[Method: POST, Route: api/login]
+in SYSTEMPATH/Cookie/Cookie.php on line 741.
+ 1 SYSTEMPATH/Cookie/Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '/')
+ 2 SYSTEMPATH/HTTP/ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImhhc2giOiJkMDMwOWNmMy01NTA0LTExZjAtYmM0Ny0wMjQyYzBhOGMwMDMiLCJ1c2VyX3R5cGUiOiIxIiwiaWF0IjoxNzUxMjI3NzA5LCJleHAiOjE3NTEyMzEzMDl9.QhDTBqPfJzW1K-aeUnvxKGJVaB9IYeL89JXCw29krm4', [...])
+ 3 APPPATH/Controllers/AuthController.php(37): CodeIgniter\HTTP\Response->setCookie('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImhhc2giOiJkMDMwOWNmMy01NTA0LTExZjAtYmM0Ny0wMjQyYzBhOGMwMDMiLCJ1c2VyX3R5cGUiOiIxIiwiaWF0IjoxNzUxMjI3NzA5LCJleHAiOjE3NTEyMzEzMDl9.QhDTBqPfJzW1K-aeUnvxKGJVaB9IYeL89JXCw29krm4', 1751231309, '/', '', false, true)
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

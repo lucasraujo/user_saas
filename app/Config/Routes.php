@@ -4,11 +4,13 @@ use CodeIgniter\Router\RouteCollection;
 use App\Controllers\UserController;
 use App\Controllers\AuthController;
 use App\Controllers\Home;
+use App\Controllers\Login;
 
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', [Home::class, 'index']);
+$routes->get('/', [login::class, 'index']);
+$routes->get('/home', [Home::class, 'index']);
 
 
 
