@@ -36,6 +36,8 @@ services:
       MYSQL_PASSWORD: ci4pass
     ports:
       - "3306:3306"
+    volumes:
+      - ./docker/mysql-init:/docker-entrypoint-initdb.d
     networks:
       - ci4net
 networks:
