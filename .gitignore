@@ -16,6 +16,10 @@ composer.lock
 app/.env
 app/.env.*
 
+writable/logs/
+
+logs/
+debug/
 
 # IDEs
 .vscode/

@@ -75,7 +75,7 @@ class UserController extends ResourceController
 
     public function updateUser($uuid = '')
     {
-        
+
         $loggedUser = authUser();                                                 
         $data = $this->request->getJSON(true);
 

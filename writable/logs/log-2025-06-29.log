@@ -14,3 +14,25 @@ WARNING - 2025-06-29 00:23:20 --> [DEPRECATED] Creation of dynamic property Code
  5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 00:49:59 --> ErrorException: Undefined property: CodeIgniter\HTTP\IncomingRequest::$user
+[Method: POST, Route: user/]
+in APPPATH/Helpers/auth_helper.php on line 6.
+ 1 APPPATH/Helpers/auth_helper.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$user', '/var/www/html/app/Helpers/auth_helper.php', 6)
+ 2 APPPATH/Controllers/UserController.php(47): authUser()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->createUser()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-29 00:50:38 --> ErrorException: Undefined property: CodeIgniter\HTTP\IncomingRequest::$user
+[Method: POST, Route: user/]
+in APPPATH/Helpers/auth_helper.php on line 6.
+ 1 APPPATH/Helpers/auth_helper.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$user', '/var/www/html/app/Helpers/auth_helper.php', 6)
+ 2 APPPATH/Controllers/UserController.php(47): authUser()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->createUser()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
