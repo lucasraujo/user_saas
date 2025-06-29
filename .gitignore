@@ -17,7 +17,7 @@ app/.env
 app/.env.*
 
 writable/logs/
-
+writable/debugbar/
 logs/
 debug/
 
