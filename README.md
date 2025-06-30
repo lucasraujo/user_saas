@@ -12,9 +12,7 @@ Certifique-se de ter o **Docker** instalado. Depois, execute os seguintes comand
 ```bash
 #!/bin/bash
 
-docker-compose up --build -d
-
-docker-compose exec app composer install
+./start.sh
 
 ```
 
