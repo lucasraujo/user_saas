@@ -7,10 +7,15 @@ Sistema para **gerenciamento de usuários**, com autenticação via **JWT**, des
 ## 🚀 Como rodar o projeto
 
 ## O ENV foi exposto propositalmente para que não aja nenhum transtorno ao tentar rodar o projeto localmente
-Certifique-se de ter o **Docker** instalado. Depois, execute o comando abaixo no terminal, na raiz do projeto:
+Certifique-se de ter o **Docker** instalado. Depois, execute os seguintes comandos abaixo no terminal, na raiz do projeto:
 
 ```bash
-./start.sh
+#!/bin/bash
+
+docker-compose up --build -d
+
+docker-compose exec app composer install
+
 ```
 
 O sistema será iniciado e estará disponível em:
