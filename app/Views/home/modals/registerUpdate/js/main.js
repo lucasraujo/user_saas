@@ -16,6 +16,7 @@ $(document).on("click", ".btn-editar", function () {
   const userData = $(this).data("user");
   const userHash = $(this).data("id");
   $("#updateUserHash").val(userHash);
+
   $("#name").val(userData.NAME);  
   $("#email").val(userData.EMAIL);
   $("#phone").val(userData.PHONE);
@@ -25,13 +26,6 @@ $(document).on("click", ".btn-editar", function () {
   $("#userModalLabel").text("Editar Usuário");
   $("#userModal").modal("show");
 }); 
-
-
-
-function isValidPassword(password) {
-  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,72}$/;
-  return regex.test(password);
-}
 
 
 function registerUser(){ 
@@ -55,7 +49,7 @@ function registerUser(){
   if (password !== confirmPassword) errors.push("As senhas não coincidem.");
 
   if (errors.length > 0) {
-    alert(errors.join("\n"));
+    showAlert("erro", "Atenção", errors.join("\n"));
     return;
   }
 
@@ -79,22 +73,15 @@ function registerUser(){
   .done(function (data) {
 
     if (data.result === true) {
-      alert("Usuário adicionado com sucesso!");
+      showAlert('sucesso', 'Sucesso',"Usuário adicionado com sucesso!");
       $("#userModal").modal("hide");
       getAllUsers();
     } else {
-      alert("Erro: " + data.message);
+       showAlert("erro", "Atenção", "Falha ao cadastrar usuário.");
     }
   })
   .fail(function (xhr, status, error) {
-    console.error("Erro na requisição:", error);
-    alert("Falha ao adicionar usuário.");
-    
-    if (xhr.status === 401) {
-      alert("Sessão expirada. Por favor, faça login novamente.");
-      localStorage.removeItem("token");
-      window.location.href = "/";
-    }
+    showAlert("erro", "Atenção", "Falha ao cadastrar usuário.");
   })
   .always(function () {
     $("#spinner").modal("hide");
@@ -118,13 +105,11 @@ function updateUser() {
     errors.push("E-mail inválido.");
   if (!phone) errors.push("Telefone é obrigatório.");
 
-  const atualizarSenha = password.length > 0;
+  const isPasswordBeingUpdated = password.length > 0 || confirmPassword.length > 0;
 
-  if (atualizarSenha) {
+  if (isPasswordBeingUpdated) {
     if (!isValidPassword(password)) {
-      errors.push(
-        "Senha deve ter ao menos 8 caracteres, incluindo letra maiúscula, minúscula, número e símbolo."
-      );
+      errors.push("Senha deve ter ao menos 8 caracteres, incluindo letra maiúscula, minúscula, número e símbolo.");
     }
     if (password !== confirmPassword) {
       errors.push("As senhas não coincidem.");
@@ -132,19 +117,19 @@ function updateUser() {
   }
 
   if (errors.length > 0) {
-    alert(errors.join("\n"));
+    showAlert("erro", "Atenção", errors.join("\n"));
     return;
   }
 
-  const payload = {
+  const requestData = {
     NAME: name,
     EMAIL: email,
     PHONE: phone,
     USER_TYPE: userType
   };
 
-  if (atualizarSenha) {
-    payload.PASSWORD = password;
+  if (isPasswordBeingUpdated) {
+    requestData.PASSWORD = password;
   }
 
   $("#spinner").modal("show");
@@ -154,29 +139,22 @@ function updateUser() {
     method: "PATCH",
     contentType: "application/json",
     dataType: "json",
-    data: JSON.stringify(payload),
+    data: JSON.stringify(requestData),
     headers: {
       Authorization: "Bearer " + localStorage.getItem("token")
     }
   })
-  .done(function (data) {
-    if (data.result === true) {
-      alert("Usuário atualizado com sucesso!");
+  .done(function (response) {
+    if (response.result === true) {
+      showAlert("sucesso", "Sucesso", "Usuário atualizado com sucesso!");
       $("#userModal").modal("hide");
       getAllUsers();
     } else {
-      alert("Erro: " + data.message);
+      showAlert("erro", "Atenção", response.message || "Falha ao atualizar usuário.");
     }
   })
   .fail(function (xhr, status, error) {
-    console.error("Erro na requisição:", error);
-    alert("Falha ao atualizar usuário.");
-
-    if (xhr.status === 401) {
-      alert("Sessão expirada. Por favor, faça login novamente.");
-      localStorage.removeItem("token");
-      window.location.href = "/";
-    }
+    showAlert("erro", "Atenção", "Falha ao atualizar usuário.");
   })
   .always(function () {
     $("#spinner").modal("hide");

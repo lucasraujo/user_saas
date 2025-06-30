@@ -41,13 +41,12 @@ async function getMyData() {
       $("#hashLoggedUser").val(data.response[0].HASH);
 
     } else {
-      alert("Erro: Falha na autenticação.");
+      showAlert("erro", "Atenção", " Falha na autenticação.");
       window.location.href = "/";
     }
   })
   .fail(function (xhr, status, error) {
-    console.error("Erro ao buscar dados:", error);
-    alert("Erro ao buscar informações do usuário.");
+    showAlert("erro", "Atenção", "Erro ao buscar informações do usuário.");
     window.location.href = "/";
   })
   .always(function () {
@@ -99,21 +98,12 @@ async function getAllUsers() {
 
       Tusers.draw();
     } else {
-      alert("Erro ao carregar usuários.");
+    showAlert("erro", "Atenção", "Erro ao carregar usuários.");
     }
   })
   .fail(function (xhr, status, error) {
-
-    if(status === 401) {
-      alert("Sessão expirada. Por favor, faça login novamente.");
-      localStorage.removeItem("token");
-      window.location.href = "/";
-    }
-
-    console.error("Erro na requisição:", error);
-    alert("Falha ao buscar usuários.");
+    showAlert("erro", "Atenção", "Falha ao buscar usuários.");
     $("#spinner").modal("hide");
-
   })
   .always(function () {
     $("#spinner").modal("hide");
@@ -138,19 +128,13 @@ $(document).on("click", ".btn-excluir", function () {
   .done(function (data) {
     if (data.result === true) {
       getAllUsers();
-      alert("Usuário excluído com sucesso.");
+      showAlert('sucesso', 'Sucesso',"Usuário excluído com sucesso.");
     } else {
-      alert("Erro ao excluir usuário.");
+      showAlert("erro", "Atenção", "Erro ao excluir usuário.");
     }
   })
   .fail(function (xhr, status, error) {
-    console.error("Erro na requisição:", error);
-    alert("Falha ao excluir usuário.");
-    if(status === 401) {
-      alert("Sessão expirada. Por favor, faça login novamente.");
-      localStorage.removeItem("token");
-      window.location.href = "/";
-    }
+      showAlert("erro", "Atenção", "Falha ao excluir usuário.");
   })
   .always(function () {
     $("#spinner").modal("hide");
@@ -184,13 +168,13 @@ function getTypesOfUsers() {
         select.append(`<option value="${type.HASH}">${type.DESCRIPTION}</option>`);
       });
     } else {
-      alert("Erro ao carregar tipos de usuário.");
+      showAlert("erro", "Atenção", "Erro ao carregar tipos de usuário.");
     }
   })
   .fail(function (xhr, status, error) {
     $("#spinner").modal("hide");
-    console.error("Erro ao buscar tipos de usuário:", error);
-    alert("Erro ao buscar tipos de usuário.");
+
+    showAlert("erro", "Atenção", "Erro ao carregar tipos de usuário.");
   }).always(function () {
     $("#spinner").modal("hide");
   });

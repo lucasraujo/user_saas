@@ -23,11 +23,11 @@ $(document).on("click", "#enter-login", function () {
         localStorage.setItem("token", data.token);
         window.location.href="home"
       } else {
-        alert("Erro: " + ( "Falha na autenticação."));
+      showAlert("erro", "Atenção", "Falha na autenticação.");
       }
     }).fail(function (xhr, status, error) {
         $("#spinner").modal("hide");
-        alert("Erro: " + ( "Falha na autenticação."));
+        showAlert("erro", "Atenção", "Falha na autenticação.");
     }).always(function () {
       $("#spinner").modal("hide");
     });
