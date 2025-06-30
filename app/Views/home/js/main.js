@@ -196,6 +196,15 @@ function getTypesOfUsers() {
   });
 }
 
+
+$(document).on("click", "#logout", function () {
+  if (!confirm("Você tem certeza que deseja sair?")) {
+    return;
+  }
+  localStorage.removeItem("token");
+  window.location.href = "/";
+})
+
 $(document).ready( async function() {
   await getMyData();
   getAllUsers();
