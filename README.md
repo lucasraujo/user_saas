@@ -135,6 +135,11 @@ Retorna os dados do usuário autenticado.
 
 ---
 
+## GIT 
+https://github.com/lucasraujo/user_saas
+
+---
+
 ## 👨‍💻 Autor
 
 Desenvolvido por **Lucas Martins**
