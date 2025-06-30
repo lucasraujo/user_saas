@@ -20,8 +20,16 @@ class AuthController extends ResourceController
         }
 
         $model = new UserModel();
-        $user = $model->getUsers(['EMAIL'=> $data['EMAIL']],["PASSWORD","ID","EMAIL","HASH","FK_USER_TYPE"],true)->response;
-        if (!$user || !password_verify($data['PASSWORD'], $user->PASSWORD)) {
+        $user = $model->getUsers(['EMAIL'=> $data['EMAIL']],["PASSWORD","users.ID","EMAIL","users.HASH","FK_USER_TYPE", "DESCRIPTION"],true);
+        
+        if ( !$user->result) {
+            return $this->failUnauthorized('Invalid email or password');
+        }
+
+        $user =  $user->response;
+
+        
+        if (!password_verify($data['PASSWORD'], $user->PASSWORD)) {
             return $this->failUnauthorized('Invalid email or password');
         }
 

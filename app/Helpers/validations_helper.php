@@ -19,3 +19,15 @@ function passwordValidationRule()
         ]
     ];
 }
+
+
+function userTypeValidationRule()
+{
+    return [
+        'label' => 'User Type',
+        'rules' => 'required|is_not_unique[type_user.HASH]',
+        'errors' => [
+            'is_not_unique' => 'The selected user type does not exist.'
+        ]
+    ];
+}
