@@ -1,7 +1,5 @@
 
 
-
-
         <div class="modal" id="spinner" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
             <div class="modal-dialog modal-dialog-centered modal-spinner" role="document">
                 <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100" >

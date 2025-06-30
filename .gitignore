@@ -13,8 +13,6 @@ app/writable/logs/*
 composer.lock
 
 # Environments
-app/.env
-app/.env.*
 
 writable/logs/
 writable/debugbar/

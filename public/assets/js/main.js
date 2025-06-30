@@ -4,20 +4,29 @@ $.ajaxSetup({
   },
   error: function (xhr) {
     if (xhr.status === 401) {
-      alert("Sessão expirada. Por favor, faça login novamente.");
+      showAlert("erro", "Atenção", "Sessão expirada. Por favor, faça login novamente.");
       localStorage.removeItem("token");
       window.location.href = "/";
     }
   }
 });
 
-$('.cpf').on('keypress', function () {
-  $(this).mask('000.000.000-00');
-});
 
-$('.phone').on('keypress', function () {
+
+$(document).on('keypress', '.phone',function () {
   $(this).mask('(00)00000-0000');
 });
+
+function maskPhone(value) {
+  value = value.replace(/\D/g, '');
+  if (value.length === 11) {
+    return value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  } else if (value.length === 10) {
+    return value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+  } else {
+    return value;
+  }
+}
 
 function removeMask(str) {
   return str.replace(/[.,%\-\/R$\(\)\s]/g, '');

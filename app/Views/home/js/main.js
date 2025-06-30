@@ -83,7 +83,7 @@ async function getAllUsers() {
         Tusers.row.add([
           user.NAME,
           user.EMAIL,
-          user.PHONE,
+          maskPhone(user.PHONE),
           user.DESCRIPTION,
           `
           <div class="d-flex justify-content-center">

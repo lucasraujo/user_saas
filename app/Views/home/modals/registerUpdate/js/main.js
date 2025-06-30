@@ -19,7 +19,7 @@ $(document).on("click", ".btn-editar", function () {
 
   $("#name").val(userData.NAME);  
   $("#email").val(userData.EMAIL);
-  $("#phone").val(userData.PHONE);
+  $("#phone").val(userData.PHONE).trigger("keypress");
   $("#password").val("");
   $("#password-2").val("");
   $("#userType").val(userData.TYPE_HASH);
@@ -61,7 +61,7 @@ function registerUser(){
     data: JSON.stringify({
       NAME: name,
       EMAIL: email,
-      PHONE: phone,
+      PHONE: removeMask(phone),
       PASSWORD: password,
       USER_TYPE: $("#userType").val()
     }),
@@ -77,7 +77,7 @@ function registerUser(){
       $("#userModal").modal("hide");
       getAllUsers();
     } else {
-       showAlert("erro", "Atenção", "Falha ao cadastrar usuário.");
+      showAlert("erro", "Atenção", "Falha ao cadastrar usuário.");
     }
   })
   .fail(function (xhr, status, error) {
@@ -124,7 +124,7 @@ function updateUser() {
   const requestData = {
     NAME: name,
     EMAIL: email,
-    PHONE: phone,
+    PHONE: removeMask(phone),
     USER_TYPE: userType
   };
 
